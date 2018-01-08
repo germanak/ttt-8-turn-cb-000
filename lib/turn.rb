@@ -11,3 +11,8 @@ def input_to_index(input)
   index = input.to_i - 1
   index
 end
+
+
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == "" || board[index] == " ")
+end
