@@ -21,7 +21,7 @@ def valid_move?(board, index)
   index.between?(0, 8) && !(position_taken?(board, index))
 end
 
-def move(board, index, player)
+def move(board, index, player="X")
   board[index] = player
 end
 
@@ -30,5 +30,5 @@ def turn(board)
   input = gets.strip()
 
   index = input_to_index(input)
-  
+  valid_move?(board, index) ? move()
 end
